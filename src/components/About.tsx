@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Target, Eye, Users } from 'lucide-react';
-import { scrollToSection } from '../utils/scrollToSection';
+// import { scrollToSection } from '../utils/scrollToSection';
 import CallbackModal from './shared/CallbackModal';
 
 const About = () => {

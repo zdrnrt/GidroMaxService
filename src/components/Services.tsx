@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Droplets, Hammer, Shield, Wrench } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollToSection';
 import CallbackModal from './shared/CallbackModal';
 
 const Services = () => {
-  const [activeService, setActiveService] = useState(0);
+  const [activeService, setActiveService] = useState<number>(0);
   const [showCallbackModal, setShowCallbackModal] = useState(false);
+
+  const activeServiceHandler = (index:number) => {
+    if (document.body.offsetWidth < 768){
+      scrollToSection('services-detail')
+    }
+    setActiveService(index)
+  }
 
   const services = [
     {
@@ -62,7 +69,7 @@ const Services = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-2xl scale-105'
                       : 'bg-white text-gray-800 hover:shadow-lg hover:scale-102 shadow-md'
                   }`}
-                  onClick={() => setActiveService(index)}
+                  onClick={() => activeServiceHandler(index)}
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
@@ -88,7 +95,7 @@ const Services = () => {
             </div>
 
             {/* Service Detail */}
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div id='services-detail' className="bg-white rounded-2xl shadow-2xl overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img
                   src={services[activeService].image}

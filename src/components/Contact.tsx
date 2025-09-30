@@ -29,6 +29,7 @@ const Contact = () => {
       setSubmitMessage('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
       setFormData({ name: '', phone: '', email: '', message: '' });
     } catch (error) {
+      console.error(error)
       setSubmitMessage('Ошибка отправки. Попробуйте позвонить нам напрямую.');
     } finally {
       setIsSubmitting(false);

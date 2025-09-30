@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Phone, Search, FileText, Wrench, CheckCircle } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { scrollToSection } from '../utils/scrollToSection';
+// import { scrollToSection } from '../utils/scrollToSection';
 import CallbackModal from './shared/CallbackModal';
 
 const Process = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Award, Clock, Users, Shield, Wrench, Star } from 'lucide-react';
 // import { scrollToSection } from '../utils/scrollToSection';
 import CallbackModal from './shared/CallbackModal';
