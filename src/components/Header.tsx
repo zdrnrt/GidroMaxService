@@ -64,24 +64,24 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md shadow-lg' 
             : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Logo className="w-12 h-12" />
               <div>
-                <h1 className={`text-2xl font-bold transition-colors ${
+                <h1 className={`lg:text-sm xl:text-2xl font-bold transition-colors ${
                   isScrolled ? 'text-gray-900' : 'text-white'
                 }`}>
                   Гидро МАКС СервиС
                 </h1>
-                <p className={`text-sm transition-colors ${
+                <p className={`lg:text-xs text-sm transition-colors ${
                   isScrolled ? 'text-gray-600' : 'text-blue-100'
                 }`}>
                   Профессиональная гидроизоляция
@@ -90,7 +90,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center lg:gap-3 xl:gap-8 flex-shrink-0 md:text-sm">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
@@ -105,16 +105,16 @@ const Header = () => {
             </nav>
 
             {/* Contact Info & CTA */}
-            <div className="hidden lg:flex items-center space-x-6">
-              <div className={`text-right transition-colors ${
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-6">
+              <div className={`text-right transition-colors flex-shrink-0 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}>
-                <p className="text-sm font-medium">8 (937) 999-23-36</p>
-                <p className="text-xs opacity-75">Ежедневно 8:30-17:30</p>
+                <p className="text-xs xl:text-sm font-medium">8 (937) 999-23-36</p>
+                <p className="text-xs xl:text-xs opacity-75">Ежедневно <br className='xl:hidden'/>8:30-17:30</p>
               </div>
               <button 
                 onClick={() => setShowCallbackModal(true)}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white lg:px-3 xl:px-6 lg:py-1 xl:py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg lg:text-sm"
               >
                 Заказать звонок
               </button>

@@ -22,7 +22,7 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-2xl text-white shadow-xl">
+            <div className="absolute -bottom-8 right-0 lg:-right-8 bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-2xl text-white shadow-xl">
               <div className="text-3xl font-bold">24+</div>
               <div className="text-sm">лет на рынке</div>
             </div>

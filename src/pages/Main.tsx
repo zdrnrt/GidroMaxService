@@ -5,7 +5,7 @@ import Services from '../components/Services';
 import Process from '../components/Process';
 import Advantages from '../components/Advantages';
 import About from '../components/About';
-import Reviews from '../components/Reviews';
+// import Reviews from '../components/Reviews';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -27,7 +27,7 @@ const Main:React.FC = () => {
       <Process />
       <Advantages />
       <About />
-      <Reviews />
+      {/* <Reviews /> */}
       <Contact />
       <Footer />
     </>

@@ -23,6 +23,7 @@ const Hero = () => {
       setSubmitMessage('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
       setFormData({ name: '', phone: '' });
     } catch (error) {
+      console.error('handleSubmit', error)
       setSubmitMessage('Ошибка отправки. Попробуйте позвонить нам напрямую.');
     } finally {
       setIsSubmitting(false);
@@ -65,7 +66,7 @@ const Hero = () => {
               Гарантия качества до 7 лет
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in animation-delay-200">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in animation-delay-200">
               Профессиональная
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                 Гидроизоляция
