@@ -53,14 +53,14 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <Phone className="w-4 h-4 mt-1 text-blue-400" />
                 <div>
-                  <p>8 (937) 999-23-36</p>
-                  <p>+7 (937) 999-23-36</p>
+                  <p><a href='tel:89379992336' className='hover:text-white'>8 (937) 999-23-36</a></p>
+                  {/* <p><a href='tel:79379992336'>+7 (937) 999-23-36</a></p> */}
                 </div>
               </div>
               
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <p>gidromaxservice@yandex.ru</p>
+                <p><a href='mailto:gidromaxservice@yandex.ru' className='hover:text-white'>gidromaxservice@yandex.ru</a></p>
               </div>
               
               <div className="flex items-start space-x-2">

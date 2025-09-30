@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Clock, Users, Shield, Wrench, Star } from 'lucide-react';
-import { scrollToSection } from '../utils/scrollToSection';
+// import { scrollToSection } from '../utils/scrollToSection';
+import CallbackModal from './shared/CallbackModal';
 
 const Advantages = () => {
+  const [showCallbackModal, setShowCallbackModal] = useState(false);
+
   const [counts, setCounts] = useState({
     experience: 0,
     projects: 0,
@@ -109,62 +112,67 @@ const Advantages = () => {
   ];
 
   return (
-    <section id="advantages" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Преимущества <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">Гидро МАКС СервиС</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Надежный партнер в сфере гидроизоляции с многолетним опытом и безупречной репутацией
-          </p>
-        </div>
+    <>
+      <section id="advantages" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Преимущества <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">Гидро МАКС СервиС</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Надежный партнер в сфере гидроизоляции с многолетним опытом и безупречной репутацией
+            </p>
+          </div>
 
-        {/* Statistics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
-                <div className={`text-4xl lg:text-5xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                  {stat.number}{stat.suffix}
+          {/* Statistics */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center cursor-pointer" onClick={() => setShowCallbackModal(true)}>
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                  <div className={`text-4xl lg:text-5xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                    {stat.number}{stat.suffix}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{stat.title}</h3>
+                  <p className="text-sm text-gray-600">{stat.subtitle}</p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-1">{stat.title}</h3>
-                <p className="text-sm text-gray-600">{stat.subtitle}</p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Advantages Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {advantages.map((advantage, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100 group"
-            >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${advantage.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <advantage.icon className="w-8 h-8 text-white" />
+          {/* Advantages Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {advantages.map((advantage, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100 group cursor-pointer"
+                onClick={() => setShowCallbackModal(true)}
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${advantage.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <advantage.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">{advantage.title}</h3>
+                <div className={`w-12 h-1 rounded-full bg-gradient-to-r ${advantage.color}`}></div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">{advantage.title}</h3>
-              <div className={`w-12 h-1 rounded-full bg-gradient-to-r ${advantage.color}`}></div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="text-center mt-16">
-          <div className="inline-block bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Нужна консультация?</h3>
-            <p className="text-gray-600 mb-6">Наши специалисты готовы ответить на все ваши вопросы</p>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg"
-            >
-              Получить консультацию
-            </button>
+          <div className="text-center mt-16">
+            <div className="inline-block bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Нужна консультация?</h3>
+              <p className="text-gray-600 mb-6">Наши специалисты готовы ответить на все ваши вопросы</p>
+              <button 
+                // onClick={() => scrollToSection('contact')}
+                onClick={() => setShowCallbackModal(true)}
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Получить консультацию
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <CallbackModal showCallbackModal={showCallbackModal} setShowCallbackModal={setShowCallbackModal} />
+    </>
   );
 };
 
