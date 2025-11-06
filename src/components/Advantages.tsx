@@ -117,7 +117,7 @@ const Advantages = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Преимущества <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">Гидро МАКС СервиС</span>
+              Преимущества <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">МАКС Строй Сервис</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Надежный партнер в сфере гидроизоляции с многолетним опытом и безупречной репутацией

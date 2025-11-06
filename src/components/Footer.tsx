@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Logo className="w-12 h-12" />
               <div>
-                <h3 className="text-xl font-bold">Гидро МАКС СервиС</h3>
+                <h3 className="text-xl font-bold">МАКС Строй Сервис</h3>
                 <p className="text-sm text-gray-400">Профессиональная гидроизоляция</p>
               </div>
             </div>
@@ -81,7 +81,7 @@ const Footer = () => {
               
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <p><a href='mailto:gidromaxservice@yandex.ru' className='hover:text-white'>gidromaxservice@yandex.ru</a></p>
+                <p><a href='mailto:info-maxss@yandex.ru' className='hover:text-white'>info-maxss@yandex.ru</a></p>
               </div>
               
               <div className="flex items-start space-x-2">
@@ -106,15 +106,15 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2025 ИП "Гидро МАКС СервиС". Все права защищены.
+              © 2025 МАКС Строй Сервис. Все права защищены.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <a href="/docs/privacy-policy.pdf" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Политика конфиденциальности
               </a>
-              <a href="/user-agreement" className="text-sm text-gray-400 hover:text-white transition-colors">
+              {/* <a href="/user-agreement" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Пользовательское соглашение
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

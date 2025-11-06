@@ -46,7 +46,7 @@ const Header = () => {
                 <h1 className={`lg:text-sm xl:text-2xl font-bold transition-colors ${
                   isScrolled ? 'text-gray-900' : 'text-white'
                 }`}>
-                  Гидро МАКС СервиС
+                  МАКС Строй Сервис
                 </h1>
                 <p className={`lg:text-xs text-sm transition-colors ${
                   isScrolled ? 'text-gray-600' : 'text-blue-100'
@@ -92,7 +92,7 @@ const Header = () => {
               </div>
               <button 
                 onClick={() => setShowCallbackModal(true)}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white lg:px-3 xl:px-6 lg:py-1 xl:py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg lg:text-sm"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white lg:px-3 xl:px-6 lg:py-1 xl:py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg lg:text-sm pointer"
               >
                 Заказать звонок
               </button>

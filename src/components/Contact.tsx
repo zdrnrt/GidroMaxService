@@ -56,7 +56,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['gidromaxservice@yandex.ru'],
+      details: ['info-maxss@yandex.ru'],
       color: 'from-green-500 to-green-600'
     },
     {

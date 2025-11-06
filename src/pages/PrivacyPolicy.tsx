@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   return (
@@ -7,13 +8,13 @@ const PrivacyPolicy = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
           <div className="flex items-center mb-8">
-            <button 
-              onClick={() => window.history.back()}
+            <Link
+              to='/'
               className="flex items-center text-blue-600 hover:text-blue-700 transition-colors mr-4"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Назад
-            </button>
+            </Link>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
               Политика конфиденциальности
             </h1>
