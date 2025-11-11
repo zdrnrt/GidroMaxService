@@ -14,10 +14,10 @@ const Advantages = () => {
   });
 
   const targetCounts = {
-    experience: 24,
-    projects: 400,
-    clients: 300,
-    guarantee: 5
+    experience: 8,
+    projects: 70,
+    clients: 70,
+    guarantee: 7
   };
 
   useEffect(() => {
@@ -75,7 +75,8 @@ const Advantages = () => {
     },
     {
       icon: Star,
-      title: 'Выезд по Самаре и ближайшим районам области - БЕСПЛАТНО',
+      //title: 'Выезд по Самаре и ближайшим районам области - БЕСПЛАТНО',
+      title: 'Выезд по самаре и составление сметы БЕСПЛАТНО',
       color: 'from-indigo-500 to-indigo-600'
     }
   ];
@@ -85,7 +86,7 @@ const Advantages = () => {
       number: counts.experience,
       suffix: '+',
       title: 'Лет опыта',
-      subtitle: 'работы с 2015 года',
+      subtitle: 'работы с 2017 года',
       color: 'from-blue-500 to-blue-600'
     },
     {

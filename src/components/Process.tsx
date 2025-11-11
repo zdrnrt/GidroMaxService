@@ -113,10 +113,11 @@ const Process = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   // onClick={() => scrollToSection('contact')}
-                  href='tel:89379992336'
+                  href='tel:89871596489'
                   className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg"
                 >
-                  8 (937) 999-23-36
+                  8 (987) 159-64-89
+                  {/* 8 (937) 999-23-36 */}
                 </a>
                 <button 
                   // onClick={() => scrollToSection('contact')}

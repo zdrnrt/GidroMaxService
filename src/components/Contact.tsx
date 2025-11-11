@@ -110,9 +110,10 @@ const Contact = () => {
               <p className="text-blue-100 mb-6">
                 Звоните прямо сейчас! Наши специалисты готовы ответить на все ваши вопросы
               </p>
-              <a href='tel:89379992336' className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg">
+              <a href='tel:89871596489' className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg">
                 <Phone className="inline-block w-5 h-5 mr-2" />
-                8 (937) 999-23-36
+                8 (987) 159-64-89
+                { /* 8 (937) 999-23-36 */}
               </a>
             </div>
           </div>
