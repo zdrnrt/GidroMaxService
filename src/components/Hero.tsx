@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-2 2xl:gap-12 items-center">
             {/* Content */}
             <div className="text-white">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6 animate-fade-in">
@@ -69,7 +69,7 @@ const Hero = () => {
                 Гарантия качества до 7 лет
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in animation-delay-200">
+              <h1 className="text-4xl 2xl:text-6xl font-bold leading-tight mb-6 animate-fade-in animation-delay-200">
                 Профессиональная
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                   Гидроизоляция
@@ -79,29 +79,15 @@ const Hero = () => {
               <p className="text-xl lg:text-2xl mb-8 text-blue-100 animate-fade-in animation-delay-400">
                 Защита зданий и сооружений от влаги с использованием передовых технологий и материалов
               </p>
+              <ul className='mb-8 grid lg:grid-cols-2 gap-x-2 gap-y-[12px] items-start text-base 2xl:text-lg text-pretty'>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Гидроизоляция стен от&nbsp;2000&nbsp;₽/м2</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Ремонт бетона от&nbsp;900&nbsp;₽</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Инъектирование стен от&nbsp;300&nbsp;₽</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Устройство отростки от&nbsp;2000&nbsp;₽/м2</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Гидроизоляция узлов прохода от&nbsp;2500&nbsp;₽</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Устройство дренажной системы от&nbsp;2000&nbsp;₽ м/п</li>
+              </ul>
 
-              {/* Features */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                {[
-                  { icon: Clock, title: 'Быстро', desc: 'от 1 дня' },
-                  { icon: Award, title: 'Качественно', desc: 'ГОСТ, СНиП' },
-                  { icon: Shield, title: 'Надежно', desc: 'гарантия 7 лет' }
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-3 animate-fade-in p-4 bg-white/10 backdrop-blur-sm rounded-lg"
-                    style={{ animationDelay: `${600 + index * 200}ms` }}
-                  >
-                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-white">{item.title}</p>
-                      <p className="text-sm text-blue-200">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-1000">
                 <button 
@@ -184,6 +170,30 @@ const Hero = () => {
                   Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                 </p>
               </div>
+
+              {/* Features */}
+              <div className="grid sm:grid-cols-3 gap-6 mt-6">
+                {[
+                  { icon: Clock, title: 'Быстро', desc: 'от 1 дня' },
+                  { icon: Award, title: 'Качественно', desc: 'ГОСТ, СНиП' },
+                  { icon: Shield, title: 'Надежно', desc: 'гарантия 7 лет' }
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col xl:flex-row items-center xl:space-x-3 animate-fade-in p-4 bg-white/10 backdrop-blur-sm rounded-lg"
+                    style={{ animationDelay: `${600 + index * 200}ms` }}
+                  >
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-center xl:text-start">
+                      <p className="font-semibold text-white">{item.title}</p>
+                      <p className="text-sm text-blue-200">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
         </div>
