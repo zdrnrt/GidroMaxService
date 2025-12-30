@@ -1,17 +1,22 @@
-import { useState, useEffect } from 'react';
-import { requestCallback } from '../../services/api';
+import { useState, useEffect, useRef } from 'react';
+import { sendForm } from '../../services/api';
+import { IMaskInput } from 'react-imask';
 
 interface CallbackModalPropsType {
-  showCallbackModal: boolean,
-  setShowCallbackModal: React.Dispatch<React.SetStateAction<boolean>>
+	showCallbackModal: boolean;
+	setShowCallbackModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CallbackModal: React.FC<CallbackModalPropsType> = ( {showCallbackModal = false, setShowCallbackModal} ) => {
+const CallbackModal: React.FC<CallbackModalPropsType> = ({
+	showCallbackModal = false,
+	setShowCallbackModal,
+}) => {
 	// const [showCallbackModal, setShowCallbackModal] = useState(show);
 	const [callbackMessage, setCallbackMessage] = useState('');
 	const [callbackPhone, setCallbackPhone] = useState('');
 	const [isSubmittingCallback, setIsSubmittingCallback] = useState(false);
-
+	const ref = useRef(null);
+	const inputRef = useRef(null);
 	useEffect(() => {
 		if (showCallbackModal) {
 			document.body.classList.add('overflow-hidden');
@@ -29,7 +34,10 @@ const CallbackModal: React.FC<CallbackModalPropsType> = ( {showCallbackModal = f
 		setCallbackMessage('');
 
 		try {
-			await requestCallback({ phone: callbackPhone });
+			await sendForm({
+				phone: callbackPhone,
+				service: 'Заказ обратного звонка',
+			});
 			setCallbackMessage(
 				'Заявка отправлена! Мы перезвоним в ближайшее время.'
 			);
@@ -48,9 +56,9 @@ const CallbackModal: React.FC<CallbackModalPropsType> = ( {showCallbackModal = f
 		}
 	};
 
-  if (!showCallbackModal) {
-    return null
-  }
+	if (!showCallbackModal) {
+		return null;
+	}
 
 	return (
 		<div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -63,15 +71,20 @@ const CallbackModal: React.FC<CallbackModalPropsType> = ( {showCallbackModal = f
 				</p>
 
 				<form onSubmit={handleCallbackRequest}>
-					<input
-						type="tel"
-						required
+					<IMaskInput
+						mask={'+{7} (000) 000-00-00'}
 						className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all mb-4"
-						placeholder="+7 (___) ___-__-__"
 						value={callbackPhone}
-						onChange={(e) => setCallbackPhone(e.target.value)}
+						unmask={true}
+						ref={ref}
+						inputRef={inputRef}
+						onAccept={(value) => {
+							setCallbackPhone(value);
+						}}
+						type="tel"
+						placeholder="+7 (___) ___-__-__"
+						required
 					/>
-
 					<div className="flex gap-3">
 						<button
 							type="submit"
