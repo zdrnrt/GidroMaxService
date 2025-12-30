@@ -19,8 +19,8 @@ const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => {
             <stop offset="1" stopColor="#1E40AF"/>
           </linearGradient>
           <linearGradient id="paint1_linear_6371_1093" x1="10" y1="10" x2="18010" y2="18010" gradientUnits="userSpaceOnUse">
-            <stop stopColor="white" stop-opacity="0.3"/>
-            <stop offset="1" stopColor="white" stop-opacity="0.1"/>
+            <stop stopColor="white" stopOpacity="0.3"/>
+            <stop offset="1" stopColor="white" stopOpacity="0.1"/>
           </linearGradient>
           <linearGradient id="paint2_linear_6371_1093" x1="74.667" y1="58" x2="6997.74" y2="4673.38" gradientUnits="userSpaceOnUse">
             <stop stopColor="#06B6D4"/>
