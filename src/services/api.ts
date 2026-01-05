@@ -19,15 +19,15 @@ export const sendForm = async (data: FormData) => {
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();
+    const result = await response.text();
     
-    if (!response.ok) {
-      throw new Error(result.error || 'Ошибка отправки формы');
+    if (result !== 'ok') {
+      throw new Error('Ошибка отправки формы');
     }
     
     return result;
   } catch (error) {
-    console.error('Ошибка отправки формы:', error);
+    console.error('Ошибка отправки формы');
     throw error;
   }
 };

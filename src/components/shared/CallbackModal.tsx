@@ -33,6 +33,14 @@ const CallbackModal: React.FC<CallbackModalPropsType> = ({
 		setIsSubmittingCallback(true);
 		setCallbackMessage('');
 
+		if (callbackPhone.length !== 11){
+			setIsSubmittingCallback(false);
+			setCallbackMessage(
+				'Ошибка: введите корректный номер.'
+			);
+			return
+		}
+		
 		try {
 			await sendForm({
 				phone: callbackPhone,

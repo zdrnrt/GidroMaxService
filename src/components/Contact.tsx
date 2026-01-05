@@ -19,6 +19,14 @@ const Contact = () => {
 		setIsSubmitting(true);
 		setSubmitMessage('');
 
+		if (formData.phone.length !== 11){
+			setIsSubmitting(false);
+			setSubmitMessage(
+				'Ошибка: введите корректный номер.'
+			);
+			return
+		}
+		
 		try {
 			await sendForm({
 				name: formData.name,
