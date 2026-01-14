@@ -93,7 +93,7 @@ const Hero = () => {
                 <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Гидроизоляция стен от&nbsp;2000&nbsp;₽/м2</li>
                 <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Ремонт бетона от&nbsp;900&nbsp;₽</li>
                 <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Инъектирование стен от&nbsp;300&nbsp;₽</li>
-                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Устройство отростки от&nbsp;2000&nbsp;₽/м2</li>
+                <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Устройство отмостки от&nbsp;2000&nbsp;₽/м2</li>
                 <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Гидроизоляция узлов прохода от&nbsp;2500&nbsp;₽</li>
                 <li className='flex items-baseline gap-x-[8px]'><span className='w-[8px] h-[8px] rounded-[50%] bg-orange-600 shrink-0'></span> Устройство дренажной системы от&nbsp;2000&nbsp;₽ м/п</li>
 							</ul>
