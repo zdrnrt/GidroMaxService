@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Droplets, Hammer, Shield, Wrench } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollToSection';
 import CallbackModal from './shared/CallbackModal';
+import gidroizolyaciya from '../assets/imgs/gidroizolyaciya.jpg';
+import inektirovaniye from '../assets/imgs/inektirovaniye.jpg';
 
 const Services = () => {
   const [activeService, setActiveService] = useState<number>(0);
@@ -20,14 +22,14 @@ const Services = () => {
       title: 'Гидроизоляция фундамента',
       description: 'Комплексная защита фундамента от грунтовых вод и влаги с использованием современных материалов.',
       features: ['Битумные мастики', 'Рулонные материалы', 'Проникающая гидрооизоляция', 'Гарантия 7 лет'],
-      image: 'https://avatars.mds.yandex.net/get-ydo/14411439/2a00000195f6e746e89d76d5f8a212af0812/diploma'
+      image: gidroizolyaciya
     },
     {
       icon: Hammer,
       title: 'Инъектирование трещин',
       description: 'Устранение трещин в бетоне методом инъектирования специальных составов под давлением.',
       features: ['Полиуретановые смолы', 'Эпоксидные составы', 'Микроцементы', 'Точечная диагностика', 'Гарантия 7 лет'],
-      image: 'https://nbuilder.ru/wp-content/uploads/inektirovaniye-1284x535.jpg'
+      image: inektirovaniye
     },
     {
       icon: Shield,
